@@ -30,9 +30,14 @@ public class Nutrients {
     public void setProtein(Double protein) {
         this.protein = protein;
     }
+
     @Override
     public String toString() {
-        return "Nutrients [calories=" + calories + ", carbohydrates=" + carbohydrates + ", fat=" + fat + ", protein="
-                + protein + "]";
+        return "Nutrients{" +
+                "calories=" + calories +
+                ", carbohydrates=" + carbohydrates +
+                ", fat=" + fat +
+                ", protein=" + protein +
+                '}';
     }
 }
