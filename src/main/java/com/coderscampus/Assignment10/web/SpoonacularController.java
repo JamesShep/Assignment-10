@@ -7,19 +7,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
-
 import java.net.URI;
 
 @RestController
 public class SpoonacularController {
 
-    @SuppressWarnings("unchecked")
     @GetMapping("mealplanner/week")
     public ResponseEntity<WeekResponse> getWeekMeals(String numCalories, String diet, String exclusions) {
         return (ResponseEntity<WeekResponse>) getSpoonacularResponse(numCalories, diet, exclusions, "week", WeekResponse.class);
     }
 
-    @SuppressWarnings("unchecked")
     @GetMapping("mealplanner/day")
     public ResponseEntity<DayResponse> getDayMeals(String numCalories, String diet, String exclusions) {
         return (ResponseEntity<DayResponse>) getSpoonacularResponse(numCalories, diet, exclusions, "day", DayResponse.class);
